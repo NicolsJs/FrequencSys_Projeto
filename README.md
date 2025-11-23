@@ -139,21 +139,28 @@ Retorna todos os registros.
 Retorna a última leitura (ideal para dashboards).
 
 ## 🗂 Estrutura do Projeto
-pgsql
+
 Copiar código
-FrequenSys/
+
+``` FrequenSys/
 │
+
 ├── server.js
 ├── routes/
+
 │
 ├── models/
 │   └── Dado.js
+
 │
 ├── esp32/
 │   └── codigo.ino
+
 │
 ├── README.md
 └── .gitignore
+
+```
 --- 
 
 ## ▶️ Como Executar a API
@@ -188,26 +195,19 @@ Copiar código
 ## 📊 Dashboard Power BI
 Abra o Power BI Desktop
 
-Obter Dados → Web
+- Obter Dados → Web
+- Informe a URL:
 
-Informe a URL:
+- arduino
+- Copiar código
+- http://SEU-IP-PUBLICO:3000/dados
+- Carregar dados
 
-arduino
-Copiar código
-http://SEU-IP-PUBLICO:3000/dados
-Carregar dados
+---
 
-## Criar gráficos de vibração, RMS e status
-
-🔐 Segurança
-Arquivo .env para credenciais
-
-MongoDB com whitelist de IP
-
-API preparada para token futuramente
-
-👩‍💻 Autores
-Nicole Julio
-Daniel Araujo 
-Projeto: FrequenSys – Sistema de Monitoramento de Vibração
-2025
+👩‍💻 Autores: 
+- Nicole Julio
+- Daniel Araujo 
+- Projeto: FrequenSys – Sistema de Monitoramento de Vibração
+- Campinas Unimatrocamp
+    - Dez/2025
