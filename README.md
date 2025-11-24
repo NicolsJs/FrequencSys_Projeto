@@ -114,12 +114,11 @@ Exemplo de envio do ESP32:
 }
 ```
 
-## 🗄 Armazenamento no MongoDB Atlas
-Todos os dados são gravados automaticamente no banco em nuvem.
+O sensor mede vibrações em três direções: X, Y e Z. 
+Isso nos dá um mapa completo de como o motor está se movimentando. 
+Depois, calculamos o RMS, que é um único valor que indica a vibração total. Ele funciona como um indicador de saúde do motor —> se sobe demais, significa que há desgaste ou possível falha futura, permitindo manutenção preditiva.
 
-## 📊 Dashboard Power BI
-O Power BI consome a API e exibe:
-
+---
 ## Dados brutos
 
 RMS
@@ -128,6 +127,12 @@ Tendências
 Gráficos em tempo real
 
 ---
+
+## 🗄 Armazenamento no MongoDB Atlas
+Todos os dados são gravados automaticamente no banco em nuvem.
+
+## 📊 Dashboard Power BI
+O Power BI consome a API e exibe:
 
 ## 🌐 Rotas da API
 ▶️ POST /dados
@@ -139,38 +144,13 @@ Retorna todos os registros.
 ▶️ GET /dados/last
 Retorna a última leitura (ideal para dashboards).
 
-## 🗂 Estrutura do Projeto
 
-Copiar código
-
-``` FrequenSys/
-│
-
-├── server.js
-├── routes/
-
-│
-├── models/
-│   └── Dado.js
-
-│
-├── esp32/
-│   └── codigo.ino
-
-│
-├── README.md
-└── .gitignore
-
-```
 --- 
 
 ## ▶️ Como Executar a API
 Instalar dependências
-Copiar código
 npm install
 Iniciar servidor
-nginx
-Copiar código
 node server.js
 A API rodará em:
 👉 http://localhost:3000
@@ -180,8 +160,7 @@ POST → http://localhost:3000/dados
 
 Body (JSON):
 
-json
-Copiar código
+json:
 {
   "ax": 0.12,
   "ay": 0.03,
@@ -198,9 +177,7 @@ Abra o Power BI Desktop
 
 - Obter Dados → Web
 - Informe a URL:
-
 - arduino
-- Copiar código
 - http://SEU-IP-PUBLICO:3000/dados
 - Carregar dados
 
