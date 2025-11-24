@@ -55,7 +55,8 @@ Se tudo estiver certo, verá:
 [Dashboard Power BI]
 
 yaml
-Copiar código
+![Imagem do WhatsApp de 2025-11-23 à(s) 11 26 10_41a53106](https://github.com/user-attachments/assets/e47e970c-8c5c-498a-befc-ee8d0d63d6d6)
+
 
 ---
 
